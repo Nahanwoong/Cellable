@@ -1,0 +1,6 @@
+framework module Pods_Cellable_Example {
+  umbrella header "Pods-Cellable_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

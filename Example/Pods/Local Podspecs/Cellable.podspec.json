@@ -1,0 +1,24 @@
+{
+  "name": "Cellable",
+  "version": "1.0.0",
+  "summary": "This is Cellable",
+  "description": "This is Cellable. Easy Cell",
+  "homepage": "https://github.com/Nahanwoong/Cellable",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Nahanwoong": "nibdevn@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/Nahanwoong/Cellable.git",
+    "tag": "1.0.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "swift_versions": "4.2",
+  "source_files": "Cellable/Sources/**/*",
+  "swift_version": "4.2"
+}

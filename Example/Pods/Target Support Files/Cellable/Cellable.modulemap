@@ -1,0 +1,6 @@
+framework module Cellable {
+  umbrella header "Cellable-umbrella.h"
+
+  export *
+  module * { export * }
+}

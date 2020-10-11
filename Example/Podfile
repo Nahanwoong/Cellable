@@ -3,9 +3,4 @@ use_frameworks!
 target 'Cellable_Example' do
   pod 'Cellable', :path => '../'
 
-  target 'Cellable_Tests' do
-    inherit! :search_paths
-
-    
-  end
 end

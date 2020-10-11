@@ -1,0 +1,16 @@
+PODS:
+  - Cellable (1.0.0)
+
+DEPENDENCIES:
+  - Cellable (from `../`)
+
+EXTERNAL SOURCES:
+  Cellable:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Cellable: bea1d74cff50612b1b3cc5014ccb2e70331b2a21
+
+PODFILE CHECKSUM: 1384f86c8b7fa1bc2208a7efdbd385b41d3aa0db
+
+COCOAPODS: 1.8.4
