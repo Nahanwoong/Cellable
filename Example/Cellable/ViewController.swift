@@ -10,12 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    // MARK: - @IBOutlet
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var collectionView: UICollectionView!
     
+    // MARK: - Properties
     private lazy var collecionLayout: UICollectionViewFlowLayout = {
         let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .vertical //.horizontal
+        layout.scrollDirection = .vertical
         layout.sectionInset = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
         layout.minimumLineSpacing = 10
         layout.minimumInteritemSpacing = 10
@@ -29,22 +31,19 @@ class ViewController: UIViewController {
         layout.headerReferenceSize = headerSize
         return layout
     }()
-
+    
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.registerHeaderFooter(TestTableViewHeaderFooterView.self)
+        tableView.registerHeaderFooter(cell: TestTableViewHeaderFooterView.self)
         tableView.register(cell: TestTableViewCell.self, delegate: self, dataSource: self)
+        collectionView.register(cell: TestCollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader)
         collectionView.register(cell: TestCollectionViewCell.self, delegate: self, dataSource: self)
-        collectionView.register(TestCollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader)
         collectionView.setCollectionViewLayout(collecionLayout, animated: true)
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 }
 
+// MARK: - UITableViewDataSource, UITableViewDelegate
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -52,18 +51,18 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return section + 1
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header: TestTableViewHeaderFooterView = tableView.dequeueReusableHeaderFooterView()
-        header.headerLabel.text = "\(section) Header"
+        header.headerLabel.text = "\(section + 1) Header"
         return header
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: TestTableViewCell = tableView.dequeueReusableCell(indexPath: indexPath)
-        cell.numberLabel.text = "\(indexPath.section) Section \(indexPath.row) Row TableViewCell"
+        cell.numberLabel.text = "\(indexPath.section + 1) Section \(indexPath.row + 1) Row TableViewCell"
         return cell
     }
     
@@ -77,10 +76,11 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        print("TableViewCell Selected: \(indexPath.section) Section \(indexPath.row) Row Cell")
+        print("TableViewCell Selected: \(indexPath.section + 1) Section \(indexPath.row + 1) Row Cell")
     }
 }
 
+// MARK: - UICollectionViewDataSource, UICollectionViewDelegate
 extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -88,23 +88,24 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        return section + 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: TestCollectionViewCell = collectionView.dequeueReusableCell(indexPath: indexPath)
-        cell.numberLabel.text = "\(indexPath.item) Cell"
+        cell.numberLabel.text = "\(indexPath.item + 1) Cell"
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let header: TestCollectionReusableView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, indexPath: indexPath)
-        header.headerLabel.text = "\(indexPath.section) Header"
+        header.headerLabel.text = "\(indexPath.section + 1) Header"
         return header
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
-        print("CollectionViewCell Selected: \(indexPath.section) Section \(indexPath.item) item Cell")
+        print("CollectionViewCell Selected: \(indexPath.section + 1) Section \(indexPath.item + 1) item Cell")
     }
 }
+

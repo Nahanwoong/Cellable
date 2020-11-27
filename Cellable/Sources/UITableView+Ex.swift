@@ -3,24 +3,58 @@ import UIKit
 
 extension UITableView {
     
-    public func register<CellType: UITableViewCell & Cellable>(_ cell: CellType.Type) {
+    public func register<CellType: UITableViewCell & Cellable>(cell: CellType.Type,
+                                                               delegate: UITableViewDelegate? = nil,
+                                                               dataSource: UITableViewDataSource? = nil,
+                                                               prefetchDataSource: UITableViewDataSourcePrefetching? = nil)
+    {
         self.register(cell.loadXIB(), forCellReuseIdentifier: cell.Identifier)
-    }
-    
-    public func register<CellType: UITableViewCell & Cellable>(cell: CellType.Type, delegate: UITableViewDelegate, dataSource: UITableViewDataSource) {
-        self.register(cell)
         self.delegate = delegate
         self.dataSource = dataSource
+        self.prefetchDataSource = prefetchDataSource
     }
     
-    public func registerHeaderFooter<CellType: UITableViewHeaderFooterView & Cellable>(_ cell: CellType.Type) {
+    public func registerHeaderFooter<CellType: UITableViewHeaderFooterView & Cellable>(cell: CellType.Type,
+                                                                                       delegate: UITableViewDelegate? = nil,
+                                                                                       dataSource: UITableViewDataSource? = nil,
+                                                                                       prefetchDataSource: UITableViewDataSourcePrefetching? = nil)
+    {
         self.register(cell.loadXIB(), forHeaderFooterViewReuseIdentifier: cell.Identifier)
-    }
-    
-    public func registerHeaderFooter<CellType: UITableViewHeaderFooterView & Cellable>(cell: CellType.Type, delegate: UITableViewDelegate, dataSource: UITableViewDataSource) {
-        self.registerHeaderFooter(cell)
         self.delegate = delegate
         self.dataSource = dataSource
+        self.prefetchDataSource = prefetchDataSource
+    }
+    
+    @available(iOS 11, *)
+    public func register<CellType: UITableViewCell & Cellable>(cell: CellType.Type,
+                                                               delegate: UITableViewDelegate? = nil,
+                                                               dataSource: UITableViewDataSource? = nil,
+                                                               prefetchDataSource: UITableViewDataSourcePrefetching? = nil,
+                                                               dragDelegate: UITableViewDragDelegate,
+                                                               dropDelegate: UITableViewDropDelegate)
+    {
+        self.register(cell.loadXIB(), forCellReuseIdentifier: cell.Identifier)
+        self.delegate = delegate
+        self.dataSource = dataSource
+        self.prefetchDataSource = prefetchDataSource
+        self.dragDelegate = dragDelegate
+        self.dropDelegate = dropDelegate
+    }
+    
+    @available(iOS 11, *)
+    public func registerHeaderFooter<CellType: UITableViewHeaderFooterView & Cellable>(cell: CellType.Type,
+                                                                                       delegate: UITableViewDelegate? = nil,
+                                                                                       dataSource: UITableViewDataSource? = nil,
+                                                                                       prefetchDataSource: UITableViewDataSourcePrefetching? = nil,
+                                                                                       dragDelegate: UITableViewDragDelegate,
+                                                                                       dropDelegate: UITableViewDropDelegate)
+    {
+        self.register(cell.loadXIB(), forHeaderFooterViewReuseIdentifier: cell.Identifier)
+        self.delegate = delegate
+        self.dataSource = dataSource
+        self.prefetchDataSource = prefetchDataSource
+        self.dragDelegate = dragDelegate
+        self.dropDelegate = dropDelegate
     }
     
     public func dequeueReusableCell<Element: Cellable>(indexPath: IndexPath) -> Element {

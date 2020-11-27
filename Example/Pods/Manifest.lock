@@ -1,5 +1,5 @@
 PODS:
-  - Cellable (1.0.0)
+  - Cellable (1.1.0)
 
 DEPENDENCIES:
   - Cellable (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Cellable: bea1d74cff50612b1b3cc5014ccb2e70331b2a21
+  Cellable: 24a3bee213c3e4b81e31a73259dd6a91b94acb9c
 
 PODFILE CHECKSUM: 1384f86c8b7fa1bc2208a7efdbd385b41d3aa0db
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.10.0

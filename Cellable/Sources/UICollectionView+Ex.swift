@@ -3,25 +3,62 @@ import UIKit
 
 extension UICollectionView {
     
-    public func register<CellType: UICollectionViewCell & Cellable>(_ cell: CellType.Type) {
+    public func register<CellType: UICollectionViewCell & Cellable>(cell: CellType.Type,
+                                                                    delegate: UICollectionViewDelegate? = nil,
+                                                                    dataSource: UICollectionViewDataSource? = nil,
+                                                                    prefetchDataSource: UICollectionViewDataSourcePrefetching? = nil)
+    {
         self.register(cell.loadXIB(), forCellWithReuseIdentifier: cell.Identifier)
-    }
-    
-    public func register<CellType: UICollectionViewCell & Cellable>(cell: CellType.Type, delegate: UICollectionViewDelegate, dataSource: UICollectionViewDataSource) {
-        self.register(cell)
         self.delegate = delegate
         self.dataSource = dataSource
+        self.prefetchDataSource = prefetchDataSource
     }
     
-    public func register<CellType: UICollectionReusableView & Cellable>(_ cell: CellType.Type, forSupplementaryViewOfKind: String) {
+    public func register<CellType: UICollectionReusableView & Cellable>(cell: CellType.Type,
+                                                                    forSupplementaryViewOfKind: String,
+                                                                    delegate: UICollectionViewDelegate? = nil,
+                                                                    dataSource: UICollectionViewDataSource? = nil,
+                                                                    prefetchDataSource: UICollectionViewDataSourcePrefetching? = nil)
+    {
         self.register(cell.loadXIB(), forSupplementaryViewOfKind: forSupplementaryViewOfKind, withReuseIdentifier: cell.Identifier)
-    }
-    
-    public func register<CellType: UICollectionReusableView & Cellable>(_ cell: CellType.Type, forSupplementaryViewOfKind: String, delegate: UICollectionViewDelegate, dataSource: UICollectionViewDataSource) {
-        self.register(cell, forSupplementaryViewOfKind: forSupplementaryViewOfKind)
         self.delegate = delegate
         self.dataSource = dataSource
+        self.prefetchDataSource = prefetchDataSource
     }
+    
+    @available(iOS 11, *)
+    public func register<CellType: UICollectionViewCell & Cellable>(cell: CellType.Type,
+                                                                    delegate: UICollectionViewDelegate? = nil,
+                                                                    dataSource: UICollectionViewDataSource? = nil,
+                                                                    prefetchDataSource: UICollectionViewDataSourcePrefetching? = nil,
+                                                                    dragDelegate: UICollectionViewDragDelegate,
+                                                                    dropDelegate: UICollectionViewDropDelegate)
+    {
+        self.register(cell.loadXIB(), forCellWithReuseIdentifier: cell.Identifier)
+        self.delegate = delegate
+        self.dataSource = dataSource
+        self.prefetchDataSource = prefetchDataSource
+        self.dragDelegate = dragDelegate
+        self.dropDelegate = dropDelegate
+    }
+    
+    @available(iOS 11, *)
+    public func register<CellType: UICollectionReusableView & Cellable>(cell: CellType.Type,
+                                                                    forSupplementaryViewOfKind: String,
+                                                                    delegate: UICollectionViewDelegate? = nil,
+                                                                    dataSource: UICollectionViewDataSource? = nil,
+                                                                    prefetchDataSource: UICollectionViewDataSourcePrefetching? = nil,
+                                                                    dragDelegate: UICollectionViewDragDelegate,
+                                                                    dropDelegate: UICollectionViewDropDelegate)
+    {
+        self.register(cell.loadXIB(), forSupplementaryViewOfKind: forSupplementaryViewOfKind, withReuseIdentifier: cell.Identifier)
+        self.delegate = delegate
+        self.dataSource = dataSource
+        self.prefetchDataSource = prefetchDataSource
+        self.dragDelegate = dragDelegate
+        self.dropDelegate = dropDelegate
+    }
+    
     
     public func dequeueReusableCell<Element: Cellable>(indexPath: IndexPath) -> Element {
         self.dequeueReusableCell(withReuseIdentifier: Element.Identifier, for: indexPath) as! Element
