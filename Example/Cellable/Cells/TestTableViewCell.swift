@@ -11,9 +11,6 @@ import Cellable
 
 class TestTableViewCell: UITableViewCell, Cellable {
     
-    static var bundle: Bundle = .main
-    static var Identifier: String = "TestTableViewCell"
-    
     @IBOutlet weak var numberLabel: UILabel!
     
     override func awakeFromNib() {

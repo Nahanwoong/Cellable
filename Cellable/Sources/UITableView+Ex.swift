@@ -8,7 +8,7 @@ extension UITableView {
                                                                dataSource: UITableViewDataSource? = nil,
                                                                prefetchDataSource: UITableViewDataSourcePrefetching? = nil)
     {
-        self.register(cell.loadXIB(), forCellReuseIdentifier: cell.Identifier)
+        self.register(cell.loadXIB(), forCellReuseIdentifier: cell.forCellReuseIdentifier)
         self.delegate = delegate
         self.dataSource = dataSource
         self.prefetchDataSource = prefetchDataSource
@@ -19,7 +19,7 @@ extension UITableView {
                                                                                        dataSource: UITableViewDataSource? = nil,
                                                                                        prefetchDataSource: UITableViewDataSourcePrefetching? = nil)
     {
-        self.register(cell.loadXIB(), forHeaderFooterViewReuseIdentifier: cell.Identifier)
+        self.register(cell.loadXIB(), forHeaderFooterViewReuseIdentifier: cell.forCellReuseIdentifier)
         self.delegate = delegate
         self.dataSource = dataSource
         self.prefetchDataSource = prefetchDataSource
@@ -33,7 +33,7 @@ extension UITableView {
                                                                dragDelegate: UITableViewDragDelegate,
                                                                dropDelegate: UITableViewDropDelegate)
     {
-        self.register(cell.loadXIB(), forCellReuseIdentifier: cell.Identifier)
+        self.register(cell.loadXIB(), forCellReuseIdentifier: cell.forCellReuseIdentifier)
         self.delegate = delegate
         self.dataSource = dataSource
         self.prefetchDataSource = prefetchDataSource
@@ -49,7 +49,7 @@ extension UITableView {
                                                                                        dragDelegate: UITableViewDragDelegate,
                                                                                        dropDelegate: UITableViewDropDelegate)
     {
-        self.register(cell.loadXIB(), forHeaderFooterViewReuseIdentifier: cell.Identifier)
+        self.register(cell.loadXIB(), forHeaderFooterViewReuseIdentifier: cell.forCellReuseIdentifier)
         self.delegate = delegate
         self.dataSource = dataSource
         self.prefetchDataSource = prefetchDataSource
@@ -58,11 +58,11 @@ extension UITableView {
     }
     
     public func dequeueReusableCell<Element: Cellable>(indexPath: IndexPath) -> Element {
-        self.dequeueReusableCell(withIdentifier: Element.Identifier, for: indexPath) as! Element
+        self.dequeueReusableCell(withIdentifier: Element.forCellReuseIdentifier, for: indexPath) as! Element
     }
     
     public func dequeueReusableHeaderFooterView<Element: Cellable>() -> Element {
-        self.dequeueReusableHeaderFooterView(withIdentifier: Element.Identifier) as! Element
+        self.dequeueReusableHeaderFooterView(withIdentifier: Element.forCellReuseIdentifier) as! Element
     }
     
     public func cellForRow<Element: Cellable>(at: IndexPath) -> Element? {

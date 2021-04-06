@@ -11,9 +11,6 @@ import Cellable
 
 class TestTableViewHeaderFooterView: UITableViewHeaderFooterView, Cellable {
     
-    static var bundle: Bundle = .main
-    static var Identifier: String = "TestTableViewHeaderFooterView"
-    
     @IBOutlet weak var headerLabel: UILabel!
     
     override func awakeFromNib() {

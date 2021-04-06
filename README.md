@@ -1,3 +1,4 @@
+
 # Cellable
 
 ![Swift](https://img.shields.io/badge/Swift-4.2-orange.svg)
@@ -8,6 +9,7 @@
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Template](#template)
+- [Property](#property)
 - [Example](#example)
 
 ## Requirements
@@ -21,19 +23,48 @@ Cellable is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'Cellable', :tag => '1.1.0', :git => 'https://github.com/nibdevn/Cellable'
+pod 'Cellable', :tag => '2.0.0', :git => 'https://github.com/nibdevn/Cellable'
 ```
 
 ## Template
 
-If you are trying to create a View that implemented Cellable
-Recommend For you using this [Template](<https://github.com/nibdevn/Cellable-Template>)
+もし、Xcodeで、Cellableのプロトコルが実装された、Cell(View)を、生成する場合、
+Templateを提供致します。
+こちらから[Template](<https://github.com/nibdevn/Cellable-Template>)を見れます。
+
+## Property
+
+#### bundle
+> このプロパティはUINibを生成する時、パラメーターとして使われます。
+> Default実装では、nilになります。
+> もし、特定なbundleが必要な場合、実装してください。
+```swift
+static var bundle: Bundle? { get }
+```
+
+#### forNibNameIdentifier
+> このプロパティはUINibを生成する時、パラメーターとして使われます。
+> Default実装では、classNameになります。
+> もし、特定なforNibNameIdentifierが必要な場合、実装してください。
+
+```swift
+static var forNibNameIdentifier: String { get }
+```
+
+#### forCellReuseIdentifier
+> このプロパティはCollectionViewや、TableViewで、再使用するCellのIdentifierとなります。
+> Default実装では、classNameになります。
+> もし、特定なforNibNameIdentifierが必要な場合、実装してください。
+```swift
+static var forCellReuseIdentifier: String { get }
+```
 
 ## Example
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+Exampleプロジェクトを実行するためには、このレポジトリをクーロンし、Exampleフォルダーから、`pod install`　こちらのコマンドを実行してください。
 
 ## License
+
 These works are available under the MIT license. See the [LICENSE][license] file
 for more info.
 

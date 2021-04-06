@@ -9,10 +9,7 @@
 import UIKit
 import Cellable
 
-class TestCollectionViewCell: UICollectionViewCell ,Cellable {
-    
-    static var bundle: Bundle = .main
-    static var Identifier: String = "TestCollectionViewCell"
+class TestCollectionViewCell: UICollectionViewCell, Cellable {
     
     @IBOutlet weak var numberLabel: UILabel!
     

@@ -11,9 +11,6 @@ import Cellable
 
 class TestCollectionReusableView: UICollectionReusableView, Cellable {
     
-    static var bundle: Bundle = .main
-    static var Identifier: String = "TestCollectionReusableView"
-    
     @IBOutlet weak var headerLabel: UILabel!
     
     override func awakeFromNib() {

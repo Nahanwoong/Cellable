@@ -8,19 +8,19 @@ extension UICollectionView {
                                                                     dataSource: UICollectionViewDataSource? = nil,
                                                                     prefetchDataSource: UICollectionViewDataSourcePrefetching? = nil)
     {
-        self.register(cell.loadXIB(), forCellWithReuseIdentifier: cell.Identifier)
+        self.register(cell.loadXIB(), forCellWithReuseIdentifier: cell.forCellReuseIdentifier)
         self.delegate = delegate
         self.dataSource = dataSource
         self.prefetchDataSource = prefetchDataSource
     }
     
     public func register<CellType: UICollectionReusableView & Cellable>(cell: CellType.Type,
-                                                                    forSupplementaryViewOfKind: String,
-                                                                    delegate: UICollectionViewDelegate? = nil,
-                                                                    dataSource: UICollectionViewDataSource? = nil,
-                                                                    prefetchDataSource: UICollectionViewDataSourcePrefetching? = nil)
+                                                                        forSupplementaryViewOfKind: String,
+                                                                        delegate: UICollectionViewDelegate? = nil,
+                                                                        dataSource: UICollectionViewDataSource? = nil,
+                                                                        prefetchDataSource: UICollectionViewDataSourcePrefetching? = nil)
     {
-        self.register(cell.loadXIB(), forSupplementaryViewOfKind: forSupplementaryViewOfKind, withReuseIdentifier: cell.Identifier)
+        self.register(cell.loadXIB(), forSupplementaryViewOfKind: forSupplementaryViewOfKind, withReuseIdentifier: cell.forCellReuseIdentifier)
         self.delegate = delegate
         self.dataSource = dataSource
         self.prefetchDataSource = prefetchDataSource
@@ -34,7 +34,7 @@ extension UICollectionView {
                                                                     dragDelegate: UICollectionViewDragDelegate,
                                                                     dropDelegate: UICollectionViewDropDelegate)
     {
-        self.register(cell.loadXIB(), forCellWithReuseIdentifier: cell.Identifier)
+        self.register(cell.loadXIB(), forCellWithReuseIdentifier: cell.forCellReuseIdentifier)
         self.delegate = delegate
         self.dataSource = dataSource
         self.prefetchDataSource = prefetchDataSource
@@ -44,14 +44,14 @@ extension UICollectionView {
     
     @available(iOS 11, *)
     public func register<CellType: UICollectionReusableView & Cellable>(cell: CellType.Type,
-                                                                    forSupplementaryViewOfKind: String,
-                                                                    delegate: UICollectionViewDelegate? = nil,
-                                                                    dataSource: UICollectionViewDataSource? = nil,
-                                                                    prefetchDataSource: UICollectionViewDataSourcePrefetching? = nil,
-                                                                    dragDelegate: UICollectionViewDragDelegate,
-                                                                    dropDelegate: UICollectionViewDropDelegate)
+                                                                        forSupplementaryViewOfKind: String,
+                                                                        delegate: UICollectionViewDelegate? = nil,
+                                                                        dataSource: UICollectionViewDataSource? = nil,
+                                                                        prefetchDataSource: UICollectionViewDataSourcePrefetching? = nil,
+                                                                        dragDelegate: UICollectionViewDragDelegate,
+                                                                        dropDelegate: UICollectionViewDropDelegate)
     {
-        self.register(cell.loadXIB(), forSupplementaryViewOfKind: forSupplementaryViewOfKind, withReuseIdentifier: cell.Identifier)
+        self.register(cell.loadXIB(), forSupplementaryViewOfKind: forSupplementaryViewOfKind, withReuseIdentifier: cell.forCellReuseIdentifier)
         self.delegate = delegate
         self.dataSource = dataSource
         self.prefetchDataSource = prefetchDataSource
@@ -59,19 +59,18 @@ extension UICollectionView {
         self.dropDelegate = dropDelegate
     }
     
-    
     public func dequeueReusableCell<Element: Cellable>(indexPath: IndexPath) -> Element {
-        self.dequeueReusableCell(withReuseIdentifier: Element.Identifier, for: indexPath) as! Element
+        self.dequeueReusableCell(withReuseIdentifier: Element.forCellReuseIdentifier, for: indexPath) as! Element
     }
     
     public func dequeueReusableSupplementaryView<Element: Cellable>(ofKind: String, indexPath: IndexPath) -> Element {
         switch ofKind {
         case UICollectionView.elementKindSectionHeader:
-            return self.dequeueReusableSupplementaryView(ofKind: ofKind, withReuseIdentifier: Element.Identifier, for: indexPath) as! Element
+            return self.dequeueReusableSupplementaryView(ofKind: ofKind, withReuseIdentifier: Element.forCellReuseIdentifier, for: indexPath) as! Element
         case UICollectionView.elementKindSectionFooter:
-            return self.dequeueReusableSupplementaryView(ofKind: ofKind, withReuseIdentifier: Element.Identifier, for: indexPath) as! Element
+            return self.dequeueReusableSupplementaryView(ofKind: ofKind, withReuseIdentifier: Element.forCellReuseIdentifier, for: indexPath) as! Element
         default:
-            return self.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: Element.Identifier, for: indexPath) as! Element
+            return self.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: Element.forCellReuseIdentifier, for: indexPath) as! Element
         }
     }
     
