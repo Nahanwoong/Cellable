@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import Foundation
 import UIKit
 
@@ -77,3 +78,4 @@ extension UITableView {
         self.footerView(forSection: forSection) as? Element
     }
 }
+#endif

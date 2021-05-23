@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import Foundation
 import UIKit
 
@@ -80,3 +81,5 @@ extension Cellable {
     
     public static var forCellReuseIdentifier: String { String(describing: self) }
 }
+
+#endif
