@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		39F37A1E9E5ABD7D4D54DADA10838016 /* UICollectionView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E124F059F951E171D2BA169C43B1368 /* UICollectionView+Ex.swift */; };
+		01CE5F1C0403BD4238641A0C59960571 /* UICollectionView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7F89E098CF266C92A2BC9BB88C7EBD /* UICollectionView+Ex.swift */; };
+		22773C4FDA3B4E16878BA3FE29A7BD7B /* UITableView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9E1D7A0B0AD2176E3D9EDE60CED2D3 /* UITableView+Ex.swift */; };
 		4F813152748A15AF15A7491008160185 /* Pods-Cellable_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FAF29B71934AAF0B59D5DC45BEDF1416 /* Pods-Cellable_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9C8B0FD91912B75B16D2B8C17EE8C916 /* Cellable-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 91E28770D4AA1CB149238DF8A24CD5A6 /* Cellable-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B32B5A3A56CE0B49909794A402BD546D /* UITableView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896D50F8FD449CC226C811905BA3EC3D /* UITableView+Ex.swift */; };
-		B66E5C1BEE97CA294E0A9D4E183626D9 /* Cellable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AC0A1F0D89B896BEC38186AACF5639 /* Cellable.swift */; };
+		9C8B0FD91912B75B16D2B8C17EE8C916 /* Cellable-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 155479413B2D0E987FB755860620A960 /* Cellable-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A035B463EF735BE060F9B74A4A32E6FB /* Cellable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115FABCC7EA29EB415F674628CFAF802 /* Cellable.swift */; };
 		BB60B51C529ACC707851286F39EE7EE8 /* Pods-Cellable_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C1958B0E947286950CA75278E9ACDFF /* Pods-Cellable_Example-dummy.m */; };
-		C29950643774899DA02F232AE0BF622A /* Cellable-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E5378ACF6ABBC751796E76C73FF83AC9 /* Cellable-dummy.m */; };
+		C29950643774899DA02F232AE0BF622A /* Cellable-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1953EFD6C80A84C72440C5FD539D8DC9 /* Cellable-dummy.m */; };
 		D912FAE2726D23ECB610CA070B22FE0C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		FEC2B58E4770B0B63037622560F1105C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -29,32 +29,32 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0A0280BA1BAD2528DA2E84AC4CA9C147 /* Cellable.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Cellable.modulemap; sourceTree = "<group>"; };
-		12FBF1C7F53F07B739BF4AC096667BBD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		1649A19F8695BA9A864DA037C80887DE /* Cellable-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Cellable-Info.plist"; sourceTree = "<group>"; };
-		33FC5343169A395A872FE507E41BF296 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		0DE5A3C71D5E3699B6EA43FCCE75B800 /* Cellable.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Cellable.debug.xcconfig; sourceTree = "<group>"; };
+		115FABCC7EA29EB415F674628CFAF802 /* Cellable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cellable.swift; path = Sources/Cellable/Cellable.swift; sourceTree = "<group>"; };
+		155479413B2D0E987FB755860620A960 /* Cellable-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cellable-umbrella.h"; sourceTree = "<group>"; };
+		1953EFD6C80A84C72440C5FD539D8DC9 /* Cellable-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Cellable-dummy.m"; sourceTree = "<group>"; };
+		22A1AEC8EE7089471713026C42B0074C /* Cellable.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Cellable.modulemap; sourceTree = "<group>"; };
+		42DA590E3A5DF1DBE45D193B33EEA711 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		45AC680C28A5901C6FBC031221C5E2F2 /* Cellable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Cellable.framework; path = Cellable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		496095B08730B4B032E1E4D7E693EBC1 /* Cellable-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cellable-prefix.pch"; sourceTree = "<group>"; };
+		4C7F89E098CF266C92A2BC9BB88C7EBD /* UICollectionView+Ex.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UICollectionView+Ex.swift"; path = "Sources/Cellable/UICollectionView+Ex.swift"; sourceTree = "<group>"; };
 		5C1958B0E947286950CA75278E9ACDFF /* Pods-Cellable_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Cellable_Example-dummy.m"; sourceTree = "<group>"; };
-		5C73364287244236D0DB9609ACEFCCBE /* Cellable.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Cellable.release.xcconfig; sourceTree = "<group>"; };
-		66E1066174F1B2143A162C9293DE0FF3 /* Cellable.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = Cellable.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		6788CFBCF28383E7DE46A48483712965 /* Cellable-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cellable-prefix.pch"; sourceTree = "<group>"; };
+		654B56BDEFA11289200D0172840A8678 /* Cellable.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = Cellable.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		896D50F8FD449CC226C811905BA3EC3D /* UITableView+Ex.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITableView+Ex.swift"; path = "Cellable/Sources/UITableView+Ex.swift"; sourceTree = "<group>"; };
-		8E124F059F951E171D2BA169C43B1368 /* UICollectionView+Ex.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UICollectionView+Ex.swift"; path = "Cellable/Sources/UICollectionView+Ex.swift"; sourceTree = "<group>"; };
-		91E28770D4AA1CB149238DF8A24CD5A6 /* Cellable-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cellable-umbrella.h"; sourceTree = "<group>"; };
+		81E555ABEBD80087613FC7487779E865 /* Cellable.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Cellable.release.xcconfig; sourceTree = "<group>"; };
 		9D13F74B610DE6023BF5452044E98766 /* Pods-Cellable_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Cellable_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		AF5174D75D50C13483C609493D83F237 /* Pods-Cellable_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Cellable_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		B0AC0A1F0D89B896BEC38186AACF5639 /* Cellable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cellable.swift; path = Cellable/Sources/Cellable.swift; sourceTree = "<group>"; };
 		BA49FED466581B094A4FABC4F15FA126 /* Pods-Cellable_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Cellable_Example-frameworks.sh"; sourceTree = "<group>"; };
+		BE9E1D7A0B0AD2176E3D9EDE60CED2D3 /* UITableView+Ex.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITableView+Ex.swift"; path = "Sources/Cellable/UITableView+Ex.swift"; sourceTree = "<group>"; };
+		C2CB1866E3377A456CD6EFAF81D31554 /* Cellable-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Cellable-Info.plist"; sourceTree = "<group>"; };
 		CA144CCDD8D19BEFCB42A1AC93DB348D /* Pods-Cellable_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Cellable_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		CE0FE156A7DEE441D59FB67AD4636E8A /* Pods-Cellable_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Cellable_Example.release.xcconfig"; sourceTree = "<group>"; };
 		D0BFF869C343C7DF5FC663F756E88208 /* Pods-Cellable_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Cellable_Example-Info.plist"; sourceTree = "<group>"; };
+		DB036F99CB44F5D82353BD44F5D27345 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		E1203A449D0B4624A85EC2228D525B5C /* Pods-Cellable_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Cellable_Example.modulemap"; sourceTree = "<group>"; };
-		E5378ACF6ABBC751796E76C73FF83AC9 /* Cellable-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Cellable-dummy.m"; sourceTree = "<group>"; };
 		FAF29B71934AAF0B59D5DC45BEDF1416 /* Pods-Cellable_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Cellable_Example-umbrella.h"; sourceTree = "<group>"; };
 		FF2311CDEF1A031D6DF70E611AFEEC0A /* Pods_Cellable_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Cellable_Example.framework; path = "Pods-Cellable_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FF3B37CB21868F142E35C7F19D080E97 /* Cellable.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Cellable.debug.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,25 +94,27 @@
 			path = "Target Support Files/Pods-Cellable_Example";
 			sourceTree = "<group>";
 		};
-		2D0A82FE40A314AC9E1B955692E9DC6D /* Cellable */ = {
-			isa = PBXGroup;
-			children = (
-				B0AC0A1F0D89B896BEC38186AACF5639 /* Cellable.swift */,
-				8E124F059F951E171D2BA169C43B1368 /* UICollectionView+Ex.swift */,
-				896D50F8FD449CC226C811905BA3EC3D /* UITableView+Ex.swift */,
-				ACEFEE9F933A857B10E123E77903CAC3 /* Pod */,
-				7D5BBB11159B4C7A3228E98DF831F5F9 /* Support Files */,
-			);
-			name = Cellable;
-			path = ../..;
-			sourceTree = "<group>";
-		};
 		2F4A95F9DAD80DD8A7CC82AD35F3D04F /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
 				149C5646AF671870A34734ECE34B83F9 /* Pods-Cellable_Example */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		3296391BA337A6FB2D2F3E822F0D045C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				22A1AEC8EE7089471713026C42B0074C /* Cellable.modulemap */,
+				1953EFD6C80A84C72440C5FD539D8DC9 /* Cellable-dummy.m */,
+				C2CB1866E3377A456CD6EFAF81D31554 /* Cellable-Info.plist */,
+				496095B08730B4B032E1E4D7E693EBC1 /* Cellable-prefix.pch */,
+				155479413B2D0E987FB755860620A960 /* Cellable-umbrella.h */,
+				0DE5A3C71D5E3699B6EA43FCCE75B800 /* Cellable.debug.xcconfig */,
+				81E555ABEBD80087613FC7487779E865 /* Cellable.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/Cellable";
 			sourceTree = "<group>";
 		};
 		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
@@ -123,19 +125,14 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		7D5BBB11159B4C7A3228E98DF831F5F9 /* Support Files */ = {
+		5F723509D55AE6EFEC43A5D44A306F9B /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				0A0280BA1BAD2528DA2E84AC4CA9C147 /* Cellable.modulemap */,
-				E5378ACF6ABBC751796E76C73FF83AC9 /* Cellable-dummy.m */,
-				1649A19F8695BA9A864DA037C80887DE /* Cellable-Info.plist */,
-				6788CFBCF28383E7DE46A48483712965 /* Cellable-prefix.pch */,
-				91E28770D4AA1CB149238DF8A24CD5A6 /* Cellable-umbrella.h */,
-				FF3B37CB21868F142E35C7F19D080E97 /* Cellable.debug.xcconfig */,
-				5C73364287244236D0DB9609ACEFCCBE /* Cellable.release.xcconfig */,
+				654B56BDEFA11289200D0172840A8678 /* Cellable.podspec */,
+				DB036F99CB44F5D82353BD44F5D27345 /* LICENSE */,
+				42DA590E3A5DF1DBE45D193B33EEA711 /* README.md */,
 			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/Cellable";
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		97C4BDABAC0102A68A6FF863B25BA0C9 /* Products */ = {
@@ -147,14 +144,17 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		ACEFEE9F933A857B10E123E77903CAC3 /* Pod */ = {
+		CC6BC26A0C9380C58F8293110012454D /* Cellable */ = {
 			isa = PBXGroup;
 			children = (
-				66E1066174F1B2143A162C9293DE0FF3 /* Cellable.podspec */,
-				12FBF1C7F53F07B739BF4AC096667BBD /* LICENSE */,
-				33FC5343169A395A872FE507E41BF296 /* README.md */,
+				115FABCC7EA29EB415F674628CFAF802 /* Cellable.swift */,
+				4C7F89E098CF266C92A2BC9BB88C7EBD /* UICollectionView+Ex.swift */,
+				BE9E1D7A0B0AD2176E3D9EDE60CED2D3 /* UITableView+Ex.swift */,
+				5F723509D55AE6EFEC43A5D44A306F9B /* Pod */,
+				3296391BA337A6FB2D2F3E822F0D045C /* Support Files */,
 			);
-			name = Pod;
+			name = Cellable;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -179,7 +179,7 @@
 		EC8C4AEF28031C36EE27B2B32A262633 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				2D0A82FE40A314AC9E1B955692E9DC6D /* Cellable */,
+				CC6BC26A0C9380C58F8293110012454D /* Cellable */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -294,9 +294,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C29950643774899DA02F232AE0BF622A /* Cellable-dummy.m in Sources */,
-				B66E5C1BEE97CA294E0A9D4E183626D9 /* Cellable.swift in Sources */,
-				39F37A1E9E5ABD7D4D54DADA10838016 /* UICollectionView+Ex.swift in Sources */,
-				B32B5A3A56CE0B49909794A402BD546D /* UITableView+Ex.swift in Sources */,
+				A035B463EF735BE060F9B74A4A32E6FB /* Cellable.swift in Sources */,
+				01CE5F1C0403BD4238641A0C59960571 /* UICollectionView+Ex.swift in Sources */,
+				22773C4FDA3B4E16878BA3FE29A7BD7B /* UITableView+Ex.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,7 +484,7 @@
 		};
 		865C27837750A61EB6E34F73CDB5867B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FF3B37CB21868F142E35C7F19D080E97 /* Cellable.debug.xcconfig */;
+			baseConfigurationReference = 0DE5A3C71D5E3699B6EA43FCCE75B800 /* Cellable.debug.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -551,7 +551,7 @@
 		};
 		F761E5F4084047E371F731779FC41CDB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5C73364287244236D0DB9609ACEFCCBE /* Cellable.release.xcconfig */;
+			baseConfigurationReference = 81E555ABEBD80087613FC7487779E865 /* Cellable.release.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;

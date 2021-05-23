@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = "This is Cellable. Easy Cell"
+  s.description      = "This is Cellable. Easy Cell register"
 
   s.homepage         = 'https://github.com/nibdevn/Cellable'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '10.0'
   s.swift_version = '4.2'
-  s.source_files = 'Cellable/Sources/**/*'
+  s.source_files = 'Sources/Cellable/**/*'
   
   # s.resource_bundles = {
   #   'Cellable' => ['Cellable/Assets/*.png']

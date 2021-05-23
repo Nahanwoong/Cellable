@@ -1,8 +1,8 @@
 {
   "name": "Cellable",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "summary": "This is Cellable",
-  "description": "This is Cellable. Easy Cell",
+  "description": "This is Cellable. Easy Cell register",
   "homepage": "https://github.com/nibdevn/Cellable",
   "license": {
     "type": "MIT",
@@ -13,12 +13,12 @@
   },
   "source": {
     "git": "https://github.com/nibdevn/Cellable.git",
-    "tag": "1.1.0"
+    "tag": "2.0.0"
   },
   "platforms": {
     "ios": "10.0"
   },
   "swift_versions": "4.2",
-  "source_files": "Cellable/Sources/**/*",
+  "source_files": "Sources/Cellable/**/*",
   "swift_version": "4.2"
 }

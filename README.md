@@ -19,6 +19,8 @@
 
 ## Installation
 
+#### Cocoapods
+
 Cellable is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
@@ -26,35 +28,65 @@ it, simply add the following line to your Podfile:
 pod 'Cellable', :tag => '2.0.0', :git => 'https://github.com/nibdevn/Cellable'
 ```
 
+#### Swift Package Manager
+
+You can use The Swift Package Manager to install Cellable by adding the proper description to your Package.swift file:
+
+```swift
+import PackageDescription
+
+let package = Package(
+    name: "YOUR_PROJECT_NAME",
+    targets: [],
+    dependencies: [
+        .package(url: "https://github.com/nibdevn/Cellable.git", from: "2.0.0")
+    ]
+)
+```
+
+Next, add Cellable to your targets dependencies like so:
+
+```swift
+.target(
+    name: "YOUR_TARGET_NAME",
+    dependencies: [
+        "Cellable",
+    ]
+),
+```
+
+Then run swift package update.
+
 ## Template
 
-もし、Xcodeで、Cellableのプロトコルが実装された、Cell(View)を、生成する場合、
-Templateを提供致します。
-こちらから[Template](<https://github.com/nibdevn/Cellable-Template>)を見れます。
+If you are trying to create a View that implemented Cellable
+Recommend For you using this [Template](<https://github.com/nibdevn/Cellable-Template>)
 
 ## Property
 
 #### bundle
-> このプロパティはUINibを生成する時、パラメーターとして使われます。
-> Default実装では、nilになります。
-> もし、特定なbundleが必要な場合、実装してください。
+> This property is used as a parameter when generating UINib. 
+> The default implementation is nil. 
+> If you need a specific bundle, please implement it.
+
 ```swift
 static var bundle: Bundle? { get }
 ```
 
 #### forNibNameIdentifier
-> このプロパティはUINibを生成する時、パラメーターとして使われます。
-> Default実装では、classNameになります。
-> もし、特定なforNibNameIdentifierが必要な場合、実装してください。
+> This property is used as a parameter when generating UINib.
+> The default implementation is className.
+> If you need a specific for Nib NameIdentifier, please implement it.
 
 ```swift
 static var forNibNameIdentifier: String { get }
 ```
 
 #### forCellReuseIdentifier
-> このプロパティはCollectionViewや、TableViewで、再使用するCellのIdentifierとなります。
-> Default実装では、classNameになります。
-> もし、特定なforNibNameIdentifierが必要な場合、実装してください。
+> This property is the identifier of the cell you want to reuse in Collection View or Table View. 
+> The default implementation is className. 
+> If you need a specific for Nib NameIdentifier, please implement it.
+
 ```swift
 static var forCellReuseIdentifier: String { get }
 ```
