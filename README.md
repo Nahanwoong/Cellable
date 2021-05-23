@@ -25,7 +25,7 @@ Cellable is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'Cellable', :tag => '2.0.0', :git => 'https://github.com/nibdevn/Cellable'
+pod 'Cellable', :tag => '3.0.0', :git => 'https://github.com/nibdevn/Cellable'
 ```
 
 #### Swift Package Manager
@@ -39,7 +39,7 @@ let package = Package(
     name: "YOUR_PROJECT_NAME",
     targets: [],
     dependencies: [
-        .package(url: "https://github.com/nibdevn/Cellable.git", from: "2.0.0")
+        .package(url: "https://github.com/nibdevn/Cellable.git", from: "3.0.0")
     ]
 )
 ```
@@ -93,7 +93,7 @@ static var forCellReuseIdentifier: String { get }
 
 ## Example
 
-Exampleプロジェクトを実行するためには、このレポジトリをクーロンし、Exampleフォルダーから、`pod install`　こちらのコマンドを実行してください。
+To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## License
 
